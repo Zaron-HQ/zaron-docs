@@ -153,7 +153,7 @@ export default async function Page(props: { params: Promise<{ slug?: string[]; l
 
       <div className='flex items-center gap-4 py-6'>
         <Link
-          href='https://x.com/simdotai'
+          href='https://x.com/zaronai'
           target='_blank'
           rel='noopener noreferrer'
           aria-label='X (Twitter)'
@@ -173,7 +173,7 @@ export default async function Page(props: { params: Promise<{ slug?: string[]; l
           />
         </Link>
         <Link
-          href='https://github.com/zaronai/zaron'
+          href='https://github.com/Zaron-HQ/zaron'
           target='_blank'
           rel='noopener noreferrer'
           aria-label='GitHub'
@@ -415,8 +415,8 @@ export async function generateMetadata(props: {
         data.description ||
         'Documentation for Zaron — the open-source platform to build AI agents and run your agentic workforce.',
       images: [ogImageUrl],
-      creator: '@simdotai',
-      site: '@simdotai',
+      creator: '@zaronai',
+      site: '@zaronai',
     },
     robots: {
       index: true,

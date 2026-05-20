@@ -72,7 +72,7 @@ export const metadata = {
   other: {
     'apple-mobile-web-app-capable': 'yes',
     'mobile-web-app-capable': 'yes',
-    'msapplication-TileColor': '#33C482',
+    'msapplication-TileColor': '#0070F3',
   },
   openGraph: {
     type: 'website',
