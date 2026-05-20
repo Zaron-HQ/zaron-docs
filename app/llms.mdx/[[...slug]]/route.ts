@@ -4,7 +4,7 @@ import { i18n } from '@/lib/i18n'
 import { getLLMText } from '@/lib/llms'
 import { source } from '@/lib/source'
 
-export const revalidate = false
+export const revalidate = 3600
 
 export async function GET(
   _request: NextRequest,
@@ -30,7 +30,5 @@ export async function GET(
   })
 }
 
-export function generateStaticParams() {
-  // Only pre-render English LLM routes at build time.
-  return source.generateParams().filter((p) => !p.lang || p.lang === 'en')
-}
+// No generateStaticParams — render on-demand, cache via ISR
+export const dynamicParams = true

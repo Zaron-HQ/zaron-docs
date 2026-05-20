@@ -348,11 +348,11 @@ export default async function Page(props: { params: Promise<{ slug?: string[]; l
   )
 }
 
-export async function generateStaticParams() {
-  // Only pre-render English pages at build time to stay within memory limits.
-  // Other locales render on-demand and are cached via ISR.
-  return source.generateParams().filter((p) => !p.lang || p.lang === 'en')
-}
+// Skip build-time static generation entirely — pages render on first request
+// and are cached at the edge via ISR. This avoids OOM on 8GB build machines.
+export const dynamicParams = true
+export const dynamic = 'force-static'
+export const revalidate = 3600 // cache pages for 1 hour
 
 export async function generateMetadata(props: {
   params: Promise<{ slug?: string[]; lang: string }>
