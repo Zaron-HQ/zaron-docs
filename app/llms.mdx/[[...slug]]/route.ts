@@ -4,7 +4,7 @@ import { i18n } from '@/lib/i18n'
 import { getLLMText } from '@/lib/llms'
 import { source } from '@/lib/source'
 
-export const revalidate = 3600
+export const revalidate = false
 
 export async function GET(
   _request: NextRequest,
@@ -30,5 +30,6 @@ export async function GET(
   })
 }
 
-// No generateStaticParams — render on-demand, cache via ISR
-export const dynamicParams = true
+export function generateStaticParams() {
+  return source.generateParams()
+}

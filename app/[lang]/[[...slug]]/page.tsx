@@ -348,14 +348,11 @@ export default async function Page(props: { params: Promise<{ slug?: string[]; l
   )
 }
 
-// Return empty array — no pages pre-rendered at build time.
-// All pages render on-demand and are cached via revalidate (ISR).
 export async function generateStaticParams() {
-  return []
+  return source.generateParams()
 }
 
 export const dynamicParams = true
-export const revalidate = 3600
 
 export async function generateMetadata(props: {
   params: Promise<{ slug?: string[]; lang: string }>
@@ -398,10 +395,7 @@ export async function generateMetadata(props: {
       url: fullUrl,
       siteName: 'Zaron Documentation',
       type: 'article',
-      locale: lang === 'en' ? 'en_US' : `${lang}_${lang.toUpperCase()}`,
-      alternateLocale: ['en', 'es', 'fr', 'de', 'ja', 'zh']
-        .filter((l) => l !== lang)
-        .map((l) => (l === 'en' ? 'en_US' : `${l}_${l.toUpperCase()}`)),
+      locale: 'en_US',
       images: [
         {
           url: ogImageUrl,
@@ -435,15 +429,6 @@ export async function generateMetadata(props: {
     canonical: fullUrl,
     alternates: {
       canonical: fullUrl,
-      languages: {
-        'x-default': `${BASE_URL}${page.url.replace(`/${lang}`, '')}`,
-        en: `${BASE_URL}${page.url.replace(`/${lang}`, '')}`,
-        es: `${BASE_URL}/es${page.url.replace(`/${lang}`, '')}`,
-        fr: `${BASE_URL}/fr${page.url.replace(`/${lang}`, '')}`,
-        de: `${BASE_URL}/de${page.url.replace(`/${lang}`, '')}`,
-        ja: `${BASE_URL}/ja${page.url.replace(`/${lang}`, '')}`,
-        zh: `${BASE_URL}/zh${page.url.replace(`/${lang}`, '')}`,
-      },
     },
   }
 }

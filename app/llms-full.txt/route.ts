@@ -1,7 +1,7 @@
 import { getLLMText } from '@/lib/llms'
 import { source } from '@/lib/source'
 
-export const revalidate = 3600 // cache for 1 hour, regenerate on next request
+export const revalidate = false
 
 export async function GET() {
   try {

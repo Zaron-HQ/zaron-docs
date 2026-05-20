@@ -5,13 +5,6 @@ const withMDX = createMDX()
 /** @type {import('next').NextConfig} */
 const config = {
   reactStrictMode: true,
-  experimental: {
-    // Prevent webpack from spawning workers that double memory usage
-    webpackBuildWorker: false,
-    webpackMemoryOptimizations: true,
-    // Limit concurrent static generation to reduce peak memory
-    staticGenerationMaxConcurrency: 4,
-  },
   async redirects() {
     return [
       {
