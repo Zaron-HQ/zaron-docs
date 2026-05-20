@@ -1,0 +1,146 @@
+---
+title: Introduction
+---
+
+import { Card, Cards } from 'fumadocs-ui/components/card'
+import { Callout } from 'fumadocs-ui/components/callout'
+import { Image } from '@/components/ui/image'
+import { Video } from '@/components/ui/video'
+import { FAQ } from '@/components/ui/faq'
+
+Zaron is an open-source visual workflow builder for building and deploying AI agent workflows. Design intelligent automation systems using a no-code interface — connect AI models, databases, APIs, and business tools through an intuitive drag-and-drop canvas. Whether you're building chatbots, automating business processes, or orchestrating complex data pipelines, Zaron provides the tools to bring your AI workflows to life.
+
+<div className="flex justify-center">
+  <Image
+    src="/static/introduction.png"
+    alt="Zaron visual workflow canvas"
+    width={700}
+    height={450}
+    className="my-6"
+  />
+</div>
+
+## What You Can Build
+
+**AI Assistants & Chatbots**  
+Build intelligent conversational agents that integrate with your tools and data. Enable capabilities like web search, calendar management, email automation, and seamless interaction with business systems.
+
+**Business Process Automation**  
+Eliminate manual tasks across your organization. Automate data entry, generate reports, respond to customer inquiries, and streamline content creation workflows.
+
+**Data Processing & Analysis**  
+Transform raw data into actionable insights. Extract information from documents, perform dataset analysis, generate automated reports, and synchronize data across platforms.
+
+**API Integration Workflows**  
+Orchestrate complex multi-service interactions. Create unified API endpoints, implement sophisticated business logic, and build event-driven automation systems.
+
+<div className="mx-auto w-full overflow-hidden rounded-lg my-6">
+  <Video src="introduction/chat-workflow.mp4" width={700} height={450} />
+</div>
+
+## How It Works
+
+**Visual Workflow Editor**  
+Design workflows using an intuitive drag-and-drop canvas. Connect AI models, databases, APIs, and third-party services through a visual, no-code interface that makes complex automation logic easy to understand and maintain.
+
+**Modular Block System**  
+Build with specialized components: processing blocks (AI agents, API calls, custom functions), logic blocks (conditional branching, loops, routers), and output blocks (responses, evaluators). Each block handles a specific task in your workflow.
+
+**Flexible Execution Triggers**  
+Launch workflows through multiple channels including chat interfaces, REST APIs, webhooks, scheduled cron jobs, or external events from platforms like Slack and GitHub.
+
+**Real-time Collaboration**  
+Enable your team to build together. Multiple users can edit workflows simultaneously with live updates and granular permission controls.
+
+<div className="mx-auto w-full overflow-hidden rounded-lg my-6">
+  <Video src="introduction/build-workflow.mp4" width={700} height={450} />
+</div>
+
+## Integrations
+
+Zaron provides native integrations with 160+ services and access to 250+ additional providers through Composio:
+
+- **AI Models**: OpenAI, Anthropic, Google Gemini, Groq, Cerebras, local models via Ollama or VLLM
+- **Communication**: Gmail, Slack, Microsoft Teams, Telegram, WhatsApp  
+- **Productivity**: Notion, Google Workspace, Airtable, Asana, Linear
+- **Development**: GitHub, Jira, Linear, automated browser testing
+- **Search & Data**: Google Search, Perplexity, Firecrawl, Exa AI
+- **Databases**: PostgreSQL, MySQL, Supabase, Pinecone, Qdrant
+- **CRM & Sales**: Salesforce, HubSpot, Pipedrive, Attio
+- **Cloud & Enterprise**: Microsoft 365, Atlassian Suite, Zoom, Webflow
+
+OAuth connections work out of the box — no API key setup required for Tier 1 providers (Google, Slack, Microsoft, Salesforce, HubSpot, Atlassian). Everything else connects through Composio.
+
+For custom integrations, leverage our [MCP (Model Context Protocol) support](/mcp) to connect any external service or tool.
+
+<div className="mx-auto w-full overflow-hidden rounded-lg my-6">
+  <Video src="introduction/integrations-sidebar.mp4" width={700} height={450} />
+</div>
+
+## Orbit — Your AI Workspace Assistant
+
+**Build Workflows from Natural Language**  
+Describe what you want to build and Orbit creates it. Add blocks, configure settings, wire connections, and restructure workflows with natural language commands — no manual canvas editing required.
+
+**Intelligent Tool Use**  
+Orbit can call your connected integrations directly during a conversation — search the web, read emails, query databases, execute API calls, and more. It uses the Zaron docs, your credential store, and live workflow context to give grounded, actionable responses.
+
+**Adaptive Reasoning**  
+Choose from Fast, Auto, Advanced, or Behemoth modes depending on task complexity. Start with Fast for simple questions, scale up to Behemoth for complex architectural changes and deep debugging.
+
+**Context Menu (@)**  
+Use `@` to reference workflows, blocks, execution logs, knowledge bases, and documentation directly in the conversation.
+
+Learn more about [Orbit capabilities](/copilot) and how to maximize productivity with AI assistance.
+
+<div className="mx-auto w-full overflow-hidden rounded-lg my-6">
+  <Video src="introduction/copilot-workflow.mp4" width={700} height={450} />
+</div>
+
+## Zaron Localhost — Local Machine Access
+
+**Cloud Workflows, Local Execution**  
+Connect the Zaron desktop agent to your cloud workspace and run workflows that reach your local machine — read files, execute shell commands, run scripts — while getting results streamed back to the cloud.
+
+**Persistent Desktop Agent**  
+The Localhost agent runs continuously on your machine, maintains memory of previous tasks, and coordinates with cloud workflows via a secure bridge.
+
+Download the Zaron Localhost agent from **Settings → Localhost** in your workspace.
+
+## Deployment Options
+
+**Cloud-Hosted**  
+Launch immediately at [zaron.dev](https://zaron.dev) with fully managed infrastructure, automatic scaling, and built-in observability. Focus on building workflows while we handle the operations.
+
+**Self-Hosted**  
+Deploy on your own infrastructure using Docker Compose or Kubernetes. Maintain complete control over your data with support for local AI models through Ollama integration.
+
+## Next Steps
+
+Ready to build your first AI workflow?
+
+<Cards>
+  <Card title="Getting Started" href="/getting-started">
+    Create your first workflow in 10 minutes
+  </Card>
+  <Card title="Workflow Blocks" href="/blocks">
+    Learn about the building blocks
+  </Card>
+  <Card title="Tools & Integrations" href="/tools">
+    Explore 160+ built-in integrations
+  </Card>
+  <Card title="Credentials & OAuth" href="/credentials">
+    Connect services and manage secrets
+  </Card>
+</Cards>
+
+<FAQ items={[
+  { question: "Is Zaron free to use?", answer: "Zaron offers a free Community plan with 1,000 one-time credits to get started. Paid plans start at $25/month (Pro) with 5,000 credits and go up to $100/month (Max) with 20,000 credits. Annual billing is available at a 15% discount. You can also self-host Zaron for free on your own infrastructure." },
+  { question: "Is Zaron open source?", answer: "Yes. Zaron is open source under the Apache 2.0 license. The full source code is available on GitHub and you can self-host it, contribute to development, or modify it for your own needs. Enterprise features (SSO, access control) have a separate license that requires a subscription for production use." },
+  { question: "Which AI models and providers are supported?", answer: "Zaron supports 15+ providers including OpenAI, Anthropic, Google Gemini, Groq, Cerebras, DeepSeek, Mistral, xAI, and OpenRouter. You can also run local models through Ollama or VLLM at no API cost. Bring Your Own Key (BYOK) is supported so you can use your own API keys at base provider pricing with no markup." },
+  { question: "Do I need coding experience to use Zaron?", answer: "No. Zaron is a no-code visual builder where you design workflows by dragging blocks onto a canvas and connecting them. For advanced use cases, the Function block lets you write custom JavaScript, but it is entirely optional." },
+  { question: "Can I self-host Zaron?", answer: "Yes. Zaron provides Docker Compose configurations for self-hosted deployments. The stack includes the Zaron application, a PostgreSQL database with pgvector, and a realtime collaboration server. You can also integrate local AI models via Ollama for a fully offline setup." },
+  { question: "Is there a limit on how many workflows I can create?", answer: "There is no limit on the number of workflows you can create on any plan. Usage limits apply to execution credits, rate limits, and file storage, which vary by plan tier." },
+  { question: "What integrations are available?", answer: "Zaron offers 160+ native integrations across categories including AI models, communication tools (Gmail, Slack, Teams, Telegram), productivity apps (Notion, Google Workspace, Airtable), development tools (GitHub, Jira, Linear), search services (Google Search, Perplexity, Exa), and databases (PostgreSQL, Supabase, Pinecone). An additional 250+ providers are available through Composio with no extra configuration — just connect your account." },
+  { question: "How does Zaron compare to other workflow automation tools?", answer: "Zaron is purpose-built for AI agent workflows rather than general task automation. It provides a visual canvas for orchestrating LLM-powered agents with built-in support for tool use, structured outputs, conditional branching, and real-time collaboration. The Orbit AI assistant lets you build and modify workflows using natural language, and Zaron Localhost extends cloud workflows to your local machine." },
+]} />

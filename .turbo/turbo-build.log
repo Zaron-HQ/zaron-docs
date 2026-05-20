@@ -1,0 +1,2 @@
+$ fumadocs-mdx && NODE_OPTIONS='--max-old-space-size=8192' next build
+[MDX] generated files in 103.68680000000131ms

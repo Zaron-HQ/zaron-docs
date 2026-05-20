@@ -1,0 +1,133 @@
+---
+title: Kubernetes
+description: Desplegar Zaron con Helm
+---
+
+import { Tab, Tabs } from 'fumadocs-ui/components/tabs'
+import { Callout } from 'fumadocs-ui/components/callout'
+
+## Requisitos previos
+
+- Kubernetes 1.19+
+- Helm 3.0+
+- Soporte de aprovisionador PV
+
+## Instalación
+
+```bash
+# Clone repo
+git clone https://github.com/zaronai/Zaron.git && cd Zaron
+
+# Generate secrets
+BETTER_AUTH_SECRET=$(openssl rand -hex 32)
+ENCRYPTION_KEY=$(openssl rand -hex 32)
+INTERNAL_API_SECRET=$(openssl rand -hex 32)
+
+# Install
+helm install Zaron ./helm/Zaron \
+  --set app.env.BETTER_AUTH_SECRET="$BETTER_AUTH_SECRET" \
+  --set app.env.ENCRYPTION_KEY="$ENCRYPTION_KEY" \
+  --set app.env.INTERNAL_API_SECRET="$INTERNAL_API_SECRET" \
+  --namespace zaronsdk --create-namespace
+```
+
+## Valores específicos para la nube
+
+<Tabs items={['AWS EKS', 'Azure AKS', 'GCP GKE']}>
+  <Tab value="AWS EKS">
+
+```bash
+helm install Zaron ./helm/Zaron \
+  --values ./helm/Zaron/examples/values-aws.yaml \
+  --set app.env.BETTER_AUTH_SECRET="$BETTER_AUTH_SECRET" \
+  --set app.env.ENCRYPTION_KEY="$ENCRYPTION_KEY" \
+  --set app.env.INTERNAL_API_SECRET="$INTERNAL_API_SECRET" \
+  --set app.env.NEXT_PUBLIC_APP_URL="https://Zaron.yourdomain.com" \
+  --namespace zaronsdk --create-namespace
+```
+
+  </Tab>
+  <Tab value="Azure AKS">
+
+```bash
+helm install Zaron ./helm/Zaron \
+  --values ./helm/Zaron/examples/values-azure.yaml \
+  --set app.env.BETTER_AUTH_SECRET="$BETTER_AUTH_SECRET" \
+  --set app.env.ENCRYPTION_KEY="$ENCRYPTION_KEY" \
+  --set app.env.INTERNAL_API_SECRET="$INTERNAL_API_SECRET" \
+  --set app.env.NEXT_PUBLIC_APP_URL="https://Zaron.yourdomain.com" \
+  --namespace zaronsdk --create-namespace
+```
+
+  </Tab>
+  <Tab value="GCP GKE">
+
+```bash
+helm install Zaron ./helm/Zaron \
+  --values ./helm/Zaron/examples/values-gcp.yaml \
+  --set app.env.BETTER_AUTH_SECRET="$BETTER_AUTH_SECRET" \
+  --set app.env.ENCRYPTION_KEY="$ENCRYPTION_KEY" \
+  --set app.env.INTERNAL_API_SECRET="$INTERNAL_API_SECRET" \
+  --set app.env.NEXT_PUBLIC_APP_URL="https://Zaron.yourdomain.com" \
+  --namespace zaronsdk --create-namespace
+```
+
+  </Tab>
+</Tabs>
+
+## Configuración clave
+
+```yaml
+# Custom values.yaml
+app:
+  replicaCount: 2
+  env:
+    NEXT_PUBLIC_APP_URL: "https://Zaron.yourdomain.com"
+    OPENAI_API_KEY: "sk-..."
+
+postgresql:
+  persistence:
+    size: 50Gi
+
+ingress:
+  enabled: true
+  className: nginx
+  tls:
+    enabled: true
+  app:
+    host: Zaron.yourdomain.com
+```
+
+Consulta `helm/Zaron/values.yaml` para todas las opciones.
+
+## Base de datos externa
+
+```yaml
+postgresql:
+  enabled: false
+
+externalDatabase:
+  enabled: true
+  host: "your-db-host"
+  port: 5432
+  username: "postgres"
+  password: "your-password"
+  database: "zaronsdk"
+  sslMode: "require"
+```
+
+## Comandos
+
+```bash
+# Port forward for local access
+kubectl port-forward deployment/Zaron-Zaron-app 3000:3000 -n zaronsdk
+
+# View logs
+kubectl logs -l app.kubernetes.io/component=app -n zaronsdk --tail=100
+
+# Upgrade
+helm upgrade Zaron ./helm/Zaron --namespace zaronsdk
+
+# Uninstall
+helm uninstall Zaron --namespace zaronsdk
+```
