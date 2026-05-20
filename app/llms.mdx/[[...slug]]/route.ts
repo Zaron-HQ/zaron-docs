@@ -31,5 +31,6 @@ export async function GET(
 }
 
 export function generateStaticParams() {
-  return source.generateParams()
+  // Only pre-render English LLM routes at build time.
+  return source.generateParams().filter((p) => !p.lang || p.lang === 'en')
 }

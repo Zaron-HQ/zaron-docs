@@ -271,7 +271,7 @@ export default async function Page(props: { params: Promise<{ slug?: string[]; l
   }
 
   const MDX = data.body
-  const markdownContent = await data.getText('processed')
+  const markdownContent = typeof data.getText === 'function' ? await data.getText('raw') : ''
 
   return (
     <>
@@ -349,7 +349,9 @@ export default async function Page(props: { params: Promise<{ slug?: string[]; l
 }
 
 export async function generateStaticParams() {
-  return source.generateParams()
+  // Only pre-render English pages at build time to stay within memory limits.
+  // Other locales render on-demand and are cached via ISR.
+  return source.generateParams().filter((p) => !p.lang || p.lang === 'en')
 }
 
 export async function generateMetadata(props: {
