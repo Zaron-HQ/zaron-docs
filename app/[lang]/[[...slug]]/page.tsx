@@ -395,7 +395,10 @@ export async function generateMetadata(props: {
       url: fullUrl,
       siteName: 'Zaron Documentation',
       type: 'article',
-      locale: 'en_US',
+      locale: lang === 'en' ? 'en_US' : `${lang}_${lang.toUpperCase()}`,
+      alternateLocale: ['en', 'es', 'fr', 'de', 'ja', 'zh']
+        .filter((l) => l !== lang)
+        .map((l) => (l === 'en' ? 'en_US' : `${l}_${l.toUpperCase()}`)),
       images: [
         {
           url: ogImageUrl,
@@ -429,6 +432,15 @@ export async function generateMetadata(props: {
     canonical: fullUrl,
     alternates: {
       canonical: fullUrl,
+      languages: {
+        'x-default': `${BASE_URL}${page.url.replace(`/${lang}`, '')}`,
+        en: `${BASE_URL}${page.url.replace(`/${lang}`, '')}`,
+        es: `${BASE_URL}/es${page.url.replace(`/${lang}`, '')}`,
+        fr: `${BASE_URL}/fr${page.url.replace(`/${lang}`, '')}`,
+        de: `${BASE_URL}/de${page.url.replace(`/${lang}`, '')}`,
+        ja: `${BASE_URL}/ja${page.url.replace(`/${lang}`, '')}`,
+        zh: `${BASE_URL}/zh${page.url.replace(`/${lang}`, '')}`,
+      },
     },
   }
 }
