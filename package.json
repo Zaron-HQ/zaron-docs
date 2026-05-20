@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "1.29.0",
+    "@radix-ui/react-dropdown-menu": "2.1.16",
     "@tabler/icons-react": "^3.31.0",
     "@vercel/og": "^0.6.5",
     "class-variance-authority": "^0.7.1",
