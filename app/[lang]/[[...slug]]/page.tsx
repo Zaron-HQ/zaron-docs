@@ -1,4 +1,4 @@
-﻿import type React from 'react'
+import type React from 'react'
 import type { Root } from 'fumadocs-core/page-tree'
 import { findNeighbour } from 'fumadocs-core/page-tree'
 import type { ApiPageProps } from 'fumadocs-openapi/ui'
@@ -371,7 +371,7 @@ export async function generateMetadata(props: {
     title: data.title,
     description:
       data.description ||
-      'Documentation for Zaron — the open-source platform to build AI agents and run your agentic workforce.',
+      'Documentation for Zaron — the AI-first platform to build AI agents and run your agentic workforce.',
     keywords: [
       'AI agents',
       'agentic workforce',
@@ -391,7 +391,7 @@ export async function generateMetadata(props: {
       title: data.title,
       description:
         data.description ||
-        'Documentation for Zaron — the open-source platform to build AI agents and run your agentic workforce.',
+        'Documentation for Zaron — the AI-first platform to build AI agents and run your agentic workforce.',
       url: fullUrl,
       siteName: 'Zaron Documentation',
       type: 'article',
@@ -413,7 +413,7 @@ export async function generateMetadata(props: {
       title: data.title,
       description:
         data.description ||
-        'Documentation for Zaron — the open-source platform to build AI agents and run your agentic workforce.',
+        'Documentation for Zaron — the AI-first platform to build AI agents and run your agentic workforce.',
       images: [ogImageUrl],
       creator: '@zaronai',
       site: '@zaronai',

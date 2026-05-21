@@ -21,7 +21,6 @@ const NAV_TABS = [
     match: (p: string) => p.includes('/api-reference'),
     external: false,
   },
-  { label: 'Mothership', href: 'https://zaron.dev', external: true },
 ] as const
 
 export function Navbar() {

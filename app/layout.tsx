@@ -23,7 +23,7 @@ export const metadata = {
     template: '%s',
   },
   description:
-    'Documentation for Zaron — the open-source platform to build AI agents and run your agentic workforce. Connect 1,000+ integrations and LLMs to deploy and orchestrate agentic workflows.',
+    'Documentation for Zaron — the AI-first platform to build AI agents and run your agentic workforce. Connect 1,000+ integrations and LLMs to deploy and orchestrate agentic workflows.',
   applicationName: 'Zaron Docs',
   generator: 'Next.js',
   referrer: 'origin-when-cross-origin' as const,
@@ -31,7 +31,6 @@ export const metadata = {
     'AI agents',
     'agentic workforce',
     'AI agent platform',
-    'open-source AI agents',
     'agentic workflows',
     'LLM orchestration',
     'AI integrations',
@@ -74,7 +73,7 @@ export const metadata = {
     siteName: 'Zaron Documentation',
     title: 'Zaron Documentation — Build AI Agents & Run Your Agentic Workforce',
     description:
-      'Documentation for Zaron — the open-source platform to build AI agents and run your agentic workforce. Connect 1,000+ integrations and LLMs to deploy and orchestrate agentic workflows.',
+      'Documentation for Zaron — the AI-first platform to build AI agents and run your agentic workforce. Connect 1,000+ integrations and LLMs to deploy and orchestrate agentic workflows.',
     images: [
       {
         url: 'https://docs.zaron.dev/api/og?title=ZARON%20Documentation',
@@ -88,7 +87,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Zaron Documentation — Build AI Agents & Run Your Agentic Workforce',
     description:
-      'Documentation for Zaron — the open-source platform to build AI agents and run your agentic workforce. Connect 1,000+ integrations and LLMs to deploy and orchestrate agentic workflows.',
+      'Documentation for Zaron — the AI-first platform to build AI agents and run your agentic workforce. Connect 1,000+ integrations and LLMs to deploy and orchestrate agentic workflows.',
     creator: '@zaronai',
     site: '@zaronai',
     images: ['https://docs.zaron.dev/api/og?title=ZARON%20Documentation'],

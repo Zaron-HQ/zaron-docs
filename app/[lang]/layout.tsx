@@ -67,7 +67,7 @@ export default async function Layout({ children, params }: LayoutProps) {
     '@type': 'WebSite',
     name: 'Zaron Documentation',
     description:
-      'Documentation for Zaron — the open-source platform to build AI agents and run your agentic workforce. Connect 1,000+ integrations and LLMs to deploy and orchestrate agentic workflows.',
+      'Documentation for Zaron — the AI-first platform to build AI agents and run your agentic workforce. Connect 1,000+ integrations and LLMs to deploy and orchestrate agentic workflows.',
     url: 'https://docs.zaron.dev',
     publisher: {
       '@type': 'Organization',

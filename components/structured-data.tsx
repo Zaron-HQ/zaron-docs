@@ -74,7 +74,7 @@ export function StructuredData({
     name: 'ZARON Documentation',
     url: baseUrl,
     description:
-      'Documentation for ZARON — the open-source platform to build AI agents and run your agentic workforce. Connect 1,000+ integrations and LLMs to deploy and orchestrate agentic workflows.',
+      'Documentation for ZARON — the AI-first platform to build AI agents and run your agentic workforce. Connect 1,000+ integrations and LLMs to deploy and orchestrate agentic workflows.',
     publisher: {
       '@type': 'Organization',
       name: 'ZARON',
@@ -98,7 +98,7 @@ export function StructuredData({
     applicationCategory: 'DeveloperApplication',
     operatingSystem: 'Any',
     description:
-      'ZARON is the open-source platform to build AI agents and run your agentic workforce. Connect 1,000+ integrations and LLMs to deploy and orchestrate agentic workflows. Create agents, workflows, knowledge bases, tables, and docs.',
+      'ZARON is the AI-first platform to build AI agents and run your agentic workforce. Connect 1,000+ integrations and LLMs to deploy and orchestrate agentic workflows. Create agents, workflows, knowledge bases, tables, and docs.',
     url: baseUrl,
     author: {
       '@type': 'Organization',

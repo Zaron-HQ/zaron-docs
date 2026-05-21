@@ -37,9 +37,9 @@ export async function GET() {
 
     const manifest = `# ZARON Documentation
 
-> The open-source platform to build AI agents and run your agentic workforce.
+> the AI-first platform to build AI agents and run your agentic workforce.
 
-ZARON is the open-source platform to build AI agents and run your agentic workforce. Connect 1,000+ integrations and LLMs to deploy and orchestrate agentic workflows. Create agents, workflows, knowledge bases, tables, and docs. Trusted by over 100,000 builders.
+ZARON is the AI-first platform to build AI agents and run your agentic workforce. Connect 1,000+ integrations and LLMs to deploy and orchestrate agentic workflows. Create agents, workflows, knowledge bases, tables, and docs. Trusted by over 100,000 builders.
 
 ## Documentation Overview
 
