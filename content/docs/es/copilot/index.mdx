@@ -1,5 +1,5 @@
 ---
-title: Copilot
+title: Vega
 ---
 
 import { Callout } from 'fumadocs-ui/components/callout'
@@ -7,31 +7,31 @@ import { Card, Cards } from 'fumadocs-ui/components/card'
 import { Image } from '@/components/ui/image'
 import { MessageCircle, Package, Zap, Infinity as InfinityIcon, Brain, BrainCircuit } from 'lucide-react'
 
-Copilot es tu asistente integrado en el editor que te ayuda a crear y editar flujos de trabajo con Zaron Copilot, así como a entenderlos y mejorarlos. Puede:
+Vega es tu asistente integrado en el editor que te ayuda a crear y editar flujos de trabajo con Zaron Vega, así como a entenderlos y mejorarlos. Puede:
 
 - **Explicar**: Responder preguntas sobre Zaron y tu flujo de trabajo actual
 - **Guiar**: Sugerir ediciones y mejores prácticas
 - **Editar**: Realizar cambios en bloques, conexiones y configuraciones cuando los apruebes
 
 <Callout type="info">
-  Copilot es un servicio gestionado por Zaron. Para implementaciones autoalojadas, genera una clave API de Copilot en la aplicación alojada (zaron.dev → Configuración → Copilot)
-  1. Ve a [zaron.dev](https://zaron.dev) → Configuración → Copilot y genera una clave API de Copilot
-  2. Establece `COPILOT_API_KEY` en tu entorno autoalojado con ese valor
+  Vega es un servicio gestionado por Zaron. Para implementaciones autoalojadas, genera una clave API de Vega en la aplicación alojada (zaron.dev → Configuración → Vega)
+  1. Ve a [zaron.dev](https://zaron.dev) → Configuración → Vega y genera una clave API de Vega
+  2. Establece `VEGA_API_KEY` en tu entorno autoalojado con ese valor
 </Callout>
 
 ## Menú contextual (@)
 
-Usa el símbolo `@` para hacer referencia a varios recursos y proporcionar a Copilot más contexto sobre tu espacio de trabajo:
+Usa el símbolo `@` para hacer referencia a varios recursos y proporcionar a Vega más contexto sobre tu espacio de trabajo:
 
 <Image
-  src="/static/copilot/copilot-menu.png"
-  alt="Menú contextual de Copilot mostrando opciones de referencia disponibles"
+  src="/static/Vega/Vega-menu.png"
+  alt="Menú contextual de Vega mostrando opciones de referencia disponibles"
   width={600}
   height={400}
 />
 
 El menú `@` proporciona acceso a:
-- **Chats**: Referencia conversaciones previas con copilot
+- **Chats**: Referencia conversaciones previas con Vega
 - **Todos los flujos de trabajo**: Referencia cualquier flujo de trabajo en tu espacio de trabajo
 - **Bloques de flujo de trabajo**: Referencia bloques específicos de los flujos de trabajo
 - **Bloques**: Referencia tipos de bloques y plantillas
@@ -40,7 +40,7 @@ El menú `@` proporciona acceso a:
 - **Plantillas**: Referencia plantillas de flujo de trabajo
 - **Registros**: Referencia registros de ejecución y resultados
 
-Esta información contextual ayuda a Copilot a proporcionar asistencia más precisa y relevante para tu caso de uso específico.
+Esta información contextual ayuda a Vega a proporcionar asistencia más precisa y relevante para tu caso de uso específico.
 
 ## Modos
 
@@ -66,15 +66,15 @@ Esta información contextual ayuda a Copilot a proporcionar asistencia más prec
     }
   >
     <div className="m-0 text-sm">
-      Modo de construcción y edición. Copilot propone ediciones específicas (añadir bloques, conectar variables, ajustar configuraciones) y las aplica cuando las apruebas.
+      Modo de construcción y edición. Vega propone ediciones específicas (añadir bloques, conectar variables, ajustar configuraciones) y las aplica cuando las apruebas.
     </div>
   </Card>
 </Cards>
 
 <div className="flex justify-center">
   <Image
-    src="/static/copilot/copilot-mode.png"
-    alt="Interfaz de selección de modo de Copilot"
+    src="/static/Vega/Vega-mode.png"
+    alt="Interfaz de selección de modo de Vega"
     width={600}
     height={400}
     className="my-6"
@@ -128,11 +128,11 @@ Esta información contextual ayuda a Copilot a proporcionar asistencia más prec
 
 ### Interfaz de selección de modo
 
-Puedes cambiar fácilmente entre diferentes modos de razonamiento utilizando el selector de modo en la interfaz de Copilot:
+Puedes cambiar fácilmente entre diferentes modos de razonamiento utilizando el selector de modo en la interfaz de Vega:
 
 <Image
-  src="/static/copilot/copilot-models.png"
-  alt="Selección de modo de Copilot mostrando el modo Avanzado con el interruptor MAX"
+  src="/static/Vega/Vega-models.png"
+  alt="Selección de modo de Vega mostrando el modo Avanzado con el interruptor MAX"
   width={600}
   height={300}
 />
@@ -148,7 +148,7 @@ Elige tu modo según la complejidad de tu tarea - usa Rápido para preguntas sim
 
 ### Cómo se calculan los costos
 
-El uso de Copilot se factura por token del LLM subyacente:
+El uso de Vega se factura por token del LLM subyacente:
 
 - **Tokens de entrada**: facturados a la tarifa base del proveedor (**a costo**)
 - **Tokens de salida**: facturados a **1,5×** la tarifa base de salida del proveedor
@@ -174,7 +174,7 @@ Pasa el cursor sobre cualquiera de tus mensajes y haz clic en **Editar** para mo
 
 ### Cola de mensajes
 
-Si envías un mensaje mientras Copilot aún está respondiendo, se pone en cola. Puedes:
+Si envías un mensaje mientras Vega aún está respondiendo, se pone en cola. Puedes:
 - Ver los mensajes en cola en el panel expandible de cola
 - Enviar un mensaje en cola inmediatamente (interrumpe la respuesta actual)
 - Eliminar mensajes de la cola
@@ -191,11 +191,11 @@ Los archivos se muestran como miniaturas en las que se puede hacer clic y que se
 
 ## Puntos de control y cambios
 
-Cuando Copilot realiza cambios en tu flujo de trabajo, guarda puntos de control para que puedas revertirlos si es necesario.
+Cuando Vega realiza cambios en tu flujo de trabajo, guarda puntos de control para que puedas revertirlos si es necesario.
 
 ### Ver puntos de control
 
-Pasa el cursor sobre un mensaje de Copilot y haz clic en el icono de puntos de control para ver los estados guardados del flujo de trabajo para ese mensaje.
+Pasa el cursor sobre un mensaje de Vega y haz clic en el icono de puntos de control para ver los estados guardados del flujo de trabajo para ese mensaje.
 
 ### Revertir cambios
 
@@ -203,22 +203,22 @@ Haz clic en **Revertir** en cualquier punto de control para restaurar tu flujo d
 
 ### Aceptar cambios
 
-Cuando Copilot propone cambios, puedes:
+Cuando Vega propone cambios, puedes:
 - **Aceptar**: aplicar los cambios propuestos (`Mod+Shift+Enter`)
 - **Rechazar**: descartar los cambios y mantener tu flujo de trabajo actual
 
 ## Bloques de pensamiento
 
-Para solicitudes complejas, Copilot puede mostrar su proceso de razonamiento en bloques de pensamiento expandibles:
+Para solicitudes complejas, Vega puede mostrar su proceso de razonamiento en bloques de pensamiento expandibles:
 
-- Los bloques se expanden automáticamente mientras Copilot está pensando
+- Los bloques se expanden automáticamente mientras Vega está pensando
 - Haz clic para expandir/contraer manualmente
 - Muestra la duración del proceso de pensamiento
-- Te ayuda a entender cómo Copilot llegó a su solución
+- Te ayuda a entender cómo Vega llegó a su solución
 
 ## Selección de opciones
 
-Cuando Copilot presenta múltiples opciones, puedes seleccionar usando:
+Cuando Vega presenta múltiples opciones, puedes seleccionar usando:
 
 | Control | Acción |
 |---------|--------|
@@ -237,29 +237,29 @@ Las opciones seleccionadas están resaltadas; las opciones no seleccionadas apar
 | `Arrow Up/Down` | Navegar elementos del menú |
 | `Enter` | Seleccionar elemento del menú |
 | `Esc` | Cerrar menús |
-| `Mod+Shift+Enter` | Aceptar cambios de Copilot |
+| `Mod+Shift+Enter` | Aceptar cambios de Vega |
 
 ## Límites de uso
 
-El uso de Copilot se factura por token del LLM subyacente. Si alcanzas tu límite de uso, Copilot te pedirá que aumentes tu límite. Puedes agregar uso en incrementos ($50, $100) desde tu base actual.
+El uso de Vega se factura por token del LLM subyacente. Si alcanzas tu límite de uso, Vega te pedirá que aumentes tu límite. Puedes agregar uso en incrementos ($50, $100) desde tu base actual.
 
 <Callout type="info">
   Consulta la [página de cálculo de costos](/execution/costs) para detalles de facturación.
 </Callout>
-## Copilot MCP
+## Vega MCP
 
-Puedes usar Copilot como servidor MCP en tu editor o cliente de IA favorito. Esto te permite construir, probar, desplegar y gestionar flujos de trabajo de Zaron directamente desde herramientas como Cursor, Claude Code, Claude Desktop y VS Code.
+Puedes usar Vega como servidor MCP en tu editor o cliente de IA favorito. Esto te permite construir, probar, desplegar y gestionar flujos de trabajo de Zaron directamente desde herramientas como Cursor, Claude Code, Claude Desktop y VS Code.
 
-### Generar una clave API de Copilot
+### Generar una clave API de Vega
 
-Para conectarte al servidor MCP de Copilot, necesitas una **clave API de Copilot**:
+Para conectarte al servidor MCP de Vega, necesitas una **clave API de Vega**:
 
 1. Ve a [zaron.dev](https://zaron.dev) e inicia sesión
-2. Navega a **Configuración** → **Copilot**
+2. Navega a **Configuración** → **Vega**
 3. Haz clic en **Generar clave API**
 4. Copia la clave — solo se muestra una vez
 
-La clave se verá como `sk-Zaron-copilot-...`. Usarás esto en la configuración a continuación.
+La clave se verá como `sk-Zaron-Vega-...`. Usarás esto en la configuración a continuación.
 
 ### Cursor
 
@@ -268,30 +268,30 @@ Agrega lo siguiente a tu `.cursor/mcp.json` (nivel de proyecto) o configuración
 ```json
 {
   "mcpServers": {
-    "Zaron-copilot": {
-      "url": "https://www.zaron.dev/api/mcp/copilot",
+    "Zaron-Vega": {
+      "url": "https://www.zaron.dev/api/mcp/Vega",
       "headers": {
-        "X-API-Key": "YOUR_COPILOT_API_KEY"
+        "X-API-Key": "YOUR_VEGA_API_KEY"
       }
     }
   }
 }
 ```
 
-Reemplaza `YOUR_COPILOT_API_KEY` con la clave que generaste anteriormente.
+Reemplaza `YOUR_VEGA_API_KEY` con la clave que generaste anteriormente.
 
 ### Claude Code
 
-Ejecuta el siguiente comando para añadir el servidor MCP de Copilot:
+Ejecuta el siguiente comando para añadir el servidor MCP de Vega:
 
 ```bash
-claude mcp add Zaron-copilot \
+claude mcp add Zaron-Vega \
   --transport http \
-  https://www.zaron.dev/api/mcp/copilot \
-  --header "X-API-Key: YOUR_COPILOT_API_KEY"
+  https://www.zaron.dev/api/mcp/Vega \
+  --header "X-API-Key: YOUR_VEGA_API_KEY"
 ```
 
-Reemplaza `YOUR_COPILOT_API_KEY` con tu clave.
+Reemplaza `YOUR_VEGA_API_KEY` con tu clave.
 
 ### Claude Desktop
 
@@ -300,21 +300,21 @@ Claude Desktop requiere [`mcp-remote`](https://www.npmjs.com/package/mcp-remote)
 ```json
 {
   "mcpServers": {
-    "Zaron-copilot": {
+    "Zaron-Vega": {
       "command": "npx",
       "args": [
         "-y",
         "mcp-remote",
-        "https://www.zaron.dev/api/mcp/copilot",
+        "https://www.zaron.dev/api/mcp/Vega",
         "--header",
-        "X-API-Key: YOUR_COPILOT_API_KEY"
+        "X-API-Key: YOUR_VEGA_API_KEY"
       ]
     }
   }
 }
 ```
 
-Reemplaza `YOUR_COPILOT_API_KEY` con tu clave.
+Reemplaza `YOUR_VEGA_API_KEY` con tu clave.
 
 ### VS Code
 
@@ -324,11 +324,11 @@ Añade lo siguiente a tu `settings.json` de VS Code o al `.vscode/settings.json`
 {
   "mcp": {
     "servers": {
-      "Zaron-copilot": {
+      "Zaron-Vega": {
         "type": "http",
-        "url": "https://www.zaron.dev/api/mcp/copilot",
+        "url": "https://www.zaron.dev/api/mcp/Vega",
         "headers": {
-          "X-API-Key": "YOUR_COPILOT_API_KEY"
+          "X-API-Key": "YOUR_VEGA_API_KEY"
         }
       }
     }
@@ -336,7 +336,7 @@ Añade lo siguiente a tu `settings.json` de VS Code o al `.vscode/settings.json`
 }
 ```
 
-Reemplaza `YOUR_COPILOT_API_KEY` con tu clave.
+Reemplaza `YOUR_VEGA_API_KEY` con tu clave.
 
 <Callout type="info">
   Para implementaciones auto-alojadas, reemplaza `https://www.zaron.dev` con tu URL de Zaron auto-alojada.

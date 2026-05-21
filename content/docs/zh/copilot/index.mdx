@@ -1,5 +1,5 @@
 ---
-title: Copilot
+title: Vega
 ---
 
 import { Callout } from 'fumadocs-ui/components/callout'
@@ -7,31 +7,31 @@ import { Card, Cards } from 'fumadocs-ui/components/card'
 import { Image } from '@/components/ui/image'
 import { MessageCircle, Package, Zap, Infinity as InfinityIcon, Brain, BrainCircuit } from 'lucide-react'
 
-Copilot 是您编辑器中的助手，可帮助您使用 Zaron Copilot 构建和编辑工作流，同时理解和改进它们。它可以：
+Vega 是您编辑器中的助手，可帮助您使用 Zaron Vega 构建和编辑工作流，同时理解和改进它们。它可以：
 
 - **解释**：回答有关 Zaron 和您当前工作流的问题
 - **指导**：建议编辑和最佳实践
 - **编辑**：在您批准后对模块、连接和设置进行更改
 
 <Callout type="info">
-  Copilot 是一个由 Zaron 管理的服务。对于自托管部署，请在托管应用程序中生成一个 Copilot API 密钥（zaron.dev → 设置 → Copilot）
-  1. 前往 [zaron.dev](https://zaron.dev) → 设置 → Copilot 并生成一个 Copilot API 密钥
-  2. 在您的自托管环境中将 `COPILOT_API_KEY` 设置为该值
+  Vega 是一个由 Zaron 管理的服务。对于自托管部署，请在托管应用程序中生成一个 Vega API 密钥（zaron.dev → 设置 → Vega）
+  1. 前往 [zaron.dev](https://zaron.dev) → 设置 → Vega 并生成一个 Vega API 密钥
+  2. 在您的自托管环境中将 `VEGA_API_KEY` 设置为该值
 </Callout>
 
 ## 上下文菜单 (@)
 
-使用 `@` 符号引用各种资源，并为 Copilot 提供有关您的工作空间的更多上下文：
+使用 `@` 符号引用各种资源，并为 Vega 提供有关您的工作空间的更多上下文：
 
 <Image
-  src="/static/copilot/copilot-menu.png"
-  alt="Copilot 上下文菜单显示可用的引用选项"
+  src="/static/Vega/Vega-menu.png"
+  alt="Vega 上下文菜单显示可用的引用选项"
   width={600}
   height={400}
 />
 
 `@` 菜单提供以下访问：
-- **聊天**：引用之前的 Copilot 对话
+- **聊天**：引用之前的 Vega 对话
 - **所有工作流**：引用工作空间中的任何工作流
 - **工作流模块**：引用工作流中的特定模块
 - **模块**：引用模块类型和模板
@@ -40,7 +40,7 @@ Copilot 是您编辑器中的助手，可帮助您使用 Zaron Copilot 构建和
 - **模板**：引用工作流模板
 - **日志**：引用执行日志和结果
 
-这些上下文信息帮助 Copilot 为您的特定用例提供更准确和相关的帮助。
+这些上下文信息帮助 Vega 为您的特定用例提供更准确和相关的帮助。
 
 ## 模式
 
@@ -66,15 +66,15 @@ Copilot 是您编辑器中的助手，可帮助您使用 Zaron Copilot 构建和
     }
   >
     <div className="m-0 text-sm">
-      构建和编辑模式。Copilot 提出具体的编辑建议（添加模块、连接变量、调整设置），并在您批准后应用它们。
+      构建和编辑模式。Vega 提出具体的编辑建议（添加模块、连接变量、调整设置），并在您批准后应用它们。
     </div>
   </Card>
 </Cards>
 
 <div className="flex justify-center">
   <Image
-    src="/static/copilot/copilot-mode.png"
-    alt="Copilot 模式选择界面"
+    src="/static/Vega/Vega-mode.png"
+    alt="Vega 模式选择界面"
     width={600}
     height={400}
     className="my-6"
@@ -128,11 +128,11 @@ Copilot 是您编辑器中的助手，可帮助您使用 Zaron Copilot 构建和
 
 ### 模式选择界面
 
-您可以通过 Copilot 界面中的模式选择器轻松切换不同的推理模式：
+您可以通过 Vega 界面中的模式选择器轻松切换不同的推理模式：
 
 <Image
-  src="/static/copilot/copilot-models.png"
-  alt="Copilot 模式选择界面显示高级模式和 MAX 切换选项"
+  src="/static/Vega/Vega-models.png"
+  alt="Vega 模式选择界面显示高级模式和 MAX 切换选项"
   width={600}
   height={300}
 />
@@ -148,7 +148,7 @@ Copilot 是您编辑器中的助手，可帮助您使用 Zaron Copilot 构建和
 
 ### 成本如何计算
 
-Copilot 的使用按底层 LLM 的每个 token 计费：
+Vega 的使用按底层 LLM 的每个 token 计费：
 
 - **输入标记**：按提供商的基础费率计费（**按成本**）
 - **输出标记**：按提供商的基础输出费率的 **1.5 倍** 计费
@@ -174,7 +174,7 @@ copilotCost = (inputTokens × inputPrice + outputTokens × (outputPrice × 1.5))
 
 ### 消息队列
 
-如果你在 Copilot 仍在回复时发送消息，该消息会被加入队列。你可以：
+如果你在 Vega 仍在回复时发送消息，该消息会被加入队列。你可以：
 - 在可展开的队列面板中查看排队的消息
 - 立即发送排队消息（会中止当前回复）
 - 从队列中移除消息
@@ -191,11 +191,11 @@ copilotCost = (inputTokens × inputPrice + outputTokens × (outputPrice × 1.5))
 
 ## 检查点与更改
 
-当 Copilot 对你的工作流进行更改时，会保存检查点，方便你在需要时回退。
+当 Vega 对你的工作流进行更改时，会保存检查点，方便你在需要时回退。
 
 ### 查看检查点
 
-将鼠标悬停在 Copilot 消息上，点击检查点图标即可查看该消息保存的工作流状态。
+将鼠标悬停在 Vega 消息上，点击检查点图标即可查看该消息保存的工作流状态。
 
 ### 撤销更改
 
@@ -203,22 +203,22 @@ copilotCost = (inputTokens × inputPrice + outputTokens × (outputPrice × 1.5))
 
 ### 接受更改
 
-当 Copilot 提出更改时，你可以：
+当 Vega 提出更改时，你可以：
 - **接受**：应用建议的更改（`Mod+Shift+Enter`）
 - **拒绝**：忽略更改，保留当前工作流
 
 ## 思考块
 
-对于复杂请求， Copilot 可能会在可展开的思考块中展示其推理过程：
+对于复杂请求， Vega 可能会在可展开的思考块中展示其推理过程：
 
-- Copilot 思考时，思考块会自动展开
+- Vega 思考时，思考块会自动展开
 - 点击可手动展开/收起
 - 显示思考过程的持续时间
-- 帮助你理解 Copilot 如何得出解决方案
+- 帮助你理解 Vega 如何得出解决方案
 
 ## 选项选择
 
-当 Copilot 提供多个选项时，你可以通过以下方式选择：
+当 Vega 提供多个选项时，你可以通过以下方式选择：
 
 | 控制键 | 操作 |
 |---------|--------|
@@ -237,29 +237,29 @@ copilotCost = (inputTokens × inputPrice + outputTokens × (outputPrice × 1.5))
 | `Arrow Up/Down` | 菜单项导航 |
 | `Enter` | 选择菜单项 |
 | `Esc` | 关闭菜单 |
-| `Mod+Shift+Enter` | 接受 Copilot 更改 |
+| `Mod+Shift+Enter` | 接受 Vega 更改 |
 
 ## 使用限制
 
-Copilot 的使用按底层 LLM 的 token 计费。如果达到使用上限，Copilot 会提示你增加额度。你可以以 $50、$100 为增量，基于当前基础额度增加使用量。
+Vega 的使用按底层 LLM 的 token 计费。如果达到使用上限，Vega 会提示你增加额度。你可以以 $50、$100 为增量，基于当前基础额度增加使用量。
 
 <Callout type="info">
   计费详情请参见 [成本计算页面](/execution/costs)。
 </Callout>
-## Copilot MCP
+## Vega MCP
 
-你可以在常用编辑器或 AI 客户端中将 Copilot 作为 MCP 服务器使用。这样可以直接在 Cursor、Claude Code、Claude Desktop 和 VS Code 等工具中构建、测试、部署和管理 Zaron 工作流。
+你可以在常用编辑器或 AI 客户端中将 Vega 作为 MCP 服务器使用。这样可以直接在 Cursor、Claude Code、Claude Desktop 和 VS Code 等工具中构建、测试、部署和管理 Zaron 工作流。
 
-### 生成 Copilot API 密钥
+### 生成 Vega API 密钥
 
-要连接 Copilot MCP 服务器，你需要一个 **Copilot API 密钥**：
+要连接 Vega MCP 服务器，你需要一个 **Vega API 密钥**：
 
 1. 访问 [zaron.dev](https://zaron.dev) 并登录
-2. 进入 **设置** → **Copilot**
+2. 进入 **设置** → **Vega**
 3. 点击 **生成 API 密钥**
 4. 复制密钥 — 该密钥只显示一次
 
-密钥类似于 `sk-Zaron-copilot-...`。你将在下方配置中用到它。
+密钥类似于 `sk-Zaron-Vega-...`。你将在下方配置中用到它。
 
 ### Cursor
 
@@ -268,30 +268,30 @@ Copilot 的使用按底层 LLM 的 token 计费。如果达到使用上限，Cop
 ```json
 {
   "mcpServers": {
-    "Zaron-copilot": {
-      "url": "https://www.zaron.dev/api/mcp/copilot",
+    "Zaron-Vega": {
+      "url": "https://www.zaron.dev/api/mcp/Vega",
       "headers": {
-        "X-API-Key": "YOUR_COPILOT_API_KEY"
+        "X-API-Key": "YOUR_VEGA_API_KEY"
       }
     }
   }
 }
 ```
 
-将 `YOUR_COPILOT_API_KEY` 替换为你上面生成的密钥。
+将 `YOUR_VEGA_API_KEY` 替换为你上面生成的密钥。
 
 ### Claude Code
 
-运行以下命令以添加 Copilot MCP 服务器：
+运行以下命令以添加 Vega MCP 服务器：
 
 ```bash
-claude mcp add Zaron-copilot \
+claude mcp add Zaron-Vega \
   --transport http \
-  https://www.zaron.dev/api/mcp/copilot \
-  --header "X-API-Key: YOUR_COPILOT_API_KEY"
+  https://www.zaron.dev/api/mcp/Vega \
+  --header "X-API-Key: YOUR_VEGA_API_KEY"
 ```
 
-将 `YOUR_COPILOT_API_KEY` 替换为你的密钥。
+将 `YOUR_VEGA_API_KEY` 替换为你的密钥。
 
 ### Claude Desktop
 
@@ -300,21 +300,21 @@ Claude Desktop 需要 [`mcp-remote`](https://www.npmjs.com/package/mcp-remote) �
 ```json
 {
   "mcpServers": {
-    "Zaron-copilot": {
+    "Zaron-Vega": {
       "command": "npx",
       "args": [
         "-y",
         "mcp-remote",
-        "https://www.zaron.dev/api/mcp/copilot",
+        "https://www.zaron.dev/api/mcp/Vega",
         "--header",
-        "X-API-Key: YOUR_COPILOT_API_KEY"
+        "X-API-Key: YOUR_VEGA_API_KEY"
       ]
     }
   }
 }
 ```
 
-将 `YOUR_COPILOT_API_KEY` 替换为你的密钥。
+将 `YOUR_VEGA_API_KEY` 替换为你的密钥。
 
 ### VS Code
 
@@ -324,11 +324,11 @@ Claude Desktop 需要 [`mcp-remote`](https://www.npmjs.com/package/mcp-remote) �
 {
   "mcp": {
     "servers": {
-      "Zaron-copilot": {
+      "Zaron-Vega": {
         "type": "http",
-        "url": "https://www.zaron.dev/api/mcp/copilot",
+        "url": "https://www.zaron.dev/api/mcp/Vega",
         "headers": {
-          "X-API-Key": "YOUR_COPILOT_API_KEY"
+          "X-API-Key": "YOUR_VEGA_API_KEY"
         }
       }
     }
@@ -336,7 +336,7 @@ Claude Desktop 需要 [`mcp-remote`](https://www.npmjs.com/package/mcp-remote) �
 }
 ```
 
-将 `YOUR_COPILOT_API_KEY` 替换为你的密钥。
+将 `YOUR_VEGA_API_KEY` 替换为你的密钥。
 
 <Callout type="info">
   对于自托管部署，请将 `https://www.zaron.dev` 替换为你的自托管 Zaron URL。

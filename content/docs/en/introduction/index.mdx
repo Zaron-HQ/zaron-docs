@@ -8,7 +8,7 @@ import { Image } from '@/components/ui/image'
 import { Video } from '@/components/ui/video'
 import { FAQ } from '@/components/ui/faq'
 
-Zaron is an open-source visual workflow builder for building and deploying AI agent workflows. Design intelligent automation systems using a no-code interface — connect AI models, databases, APIs, and business tools through an intuitive drag-and-drop canvas. Whether you're building chatbots, automating business processes, or orchestrating complex data pipelines, Zaron provides the tools to bring your AI workflows to life.
+Zaron is an AI-first visual workflow builder for building and deploying AI agent workflows. Design intelligent automation systems using a no-code interface — connect AI models, databases, APIs, and business tools through an intuitive drag-and-drop canvas. Whether you're building chatbots, automating business processes, or orchestrating complex data pipelines, Zaron provides the tools to bring your AI workflows to life.
 
 <div className="flex justify-center">
   <Image
@@ -91,7 +91,7 @@ Choose from Fast, Auto, Advanced, or Behemoth modes depending on task complexity
 **Context Menu (@)**  
 Use `@` to reference workflows, blocks, execution logs, knowledge bases, and documentation directly in the conversation.
 
-Learn more about [Orbit capabilities](/copilot) and how to maximize productivity with AI assistance.
+Learn more about [Vega capabilities](/copilot) and how to maximize productivity with AI assistance.
 
 <div className="mx-auto w-full overflow-hidden rounded-lg my-6">
   <Video src="introduction/copilot-workflow.mp4" width={700} height={450} />
@@ -135,11 +135,11 @@ Ready to build your first AI workflow?
 </Cards>
 
 <FAQ items={[
-  { question: "Is Zaron free to use?", answer: "Zaron offers a free Community plan with 1,000 one-time credits to get started. Paid plans start at $25/month (Pro) with 5,000 credits and go up to $100/month (Max) with 20,000 credits. Annual billing is available at a 15% discount. You can also self-host Zaron for free on your own infrastructure." },
-  { question: "Is Zaron open source?", answer: "Yes. Zaron is open source under the Apache 2.0 license. The full source code is available on GitHub and you can self-host it, contribute to development, or modify it for your own needs. Enterprise features (SSO, access control) have a separate license that requires a subscription for production use." },
+  { question: "Is Zaron free to use?", answer: "Zaron offers a free plan with 1,000 one-time credits to get started. Paid plans start at $25/month (Pro) with 6,000 credits and go up to $100/month (Max) with 25,000 credits." },
+  { question: "What makes Zaron different?", answer: "Zaron is an AI-first platform with Vega AI that builds production-ready workflows from natural language in 60 seconds, Orbit workspace intelligence that learns your company context, and a full agentic execution engine with 200+ integrations. No other automation tool combines all three." },
   { question: "Which AI models and providers are supported?", answer: "Zaron supports 15+ providers including OpenAI, Anthropic, Google Gemini, Groq, Cerebras, DeepSeek, Mistral, xAI, and OpenRouter. You can also run local models through Ollama or VLLM at no API cost. Bring Your Own Key (BYOK) is supported so you can use your own API keys at base provider pricing with no markup." },
   { question: "Do I need coding experience to use Zaron?", answer: "No. Zaron is a no-code visual builder where you design workflows by dragging blocks onto a canvas and connecting them. For advanced use cases, the Function block lets you write custom JavaScript, but it is entirely optional." },
-  { question: "Can I self-host Zaron?", answer: "Yes. Zaron provides Docker Compose configurations for self-hosted deployments. The stack includes the Zaron application, a PostgreSQL database with pgvector, and a realtime collaboration server. You can also integrate local AI models via Ollama for a fully offline setup." },
+  { question: "Can I self-host Zaron?", answer: "Enterprise customers can deploy Zaron on their own infrastructure. Contact sales for self-hosted deployment options including Docker Compose configurations with PostgreSQL, pgvector, and local AI model support via Ollama." },
   { question: "Is there a limit on how many workflows I can create?", answer: "There is no limit on the number of workflows you can create on any plan. Usage limits apply to execution credits, rate limits, and file storage, which vary by plan tier." },
   { question: "What integrations are available?", answer: "Zaron offers 160+ native integrations across categories including AI models, communication tools (Gmail, Slack, Teams, Telegram), productivity apps (Notion, Google Workspace, Airtable), development tools (GitHub, Jira, Linear), search services (Google Search, Perplexity, Exa), and databases (PostgreSQL, Supabase, Pinecone). An additional 250+ providers are available through Composio with no extra configuration — just connect your account." },
   { question: "How does Zaron compare to other workflow automation tools?", answer: "Zaron is purpose-built for AI agent workflows rather than general task automation. It provides a visual canvas for orchestrating LLM-powered agents with built-in support for tool use, structured outputs, conditional branching, and real-time collaboration. The Orbit AI assistant lets you build and modify workflows using natural language, and Zaron Localhost extends cloud workflows to your local machine." },

@@ -1,5 +1,5 @@
 ---
-title: Copilot
+title: Vega
 ---
 
 import { Callout } from 'fumadocs-ui/components/callout'
@@ -14,9 +14,9 @@ Copilotはエディター内のアシスタントで、Zaron Copilotを使用し
 - **編集**: 承認後にブロック、接続、設定の変更を実行
 
 <Callout type="info">
-  CopilotはSimが管理するサービスです。セルフホスト型のデプロイメントでは、ホスト型アプリ（zaron.dev → 設定 → Copilot）でCopilot APIキーを生成してください
-  1. [zaron.dev](https://zaron.dev) → 設定 → Copilotに移動し、Copilot APIキーを生成
-  2. セルフホスト環境の `COPILOT_API_KEY` にその値を設定
+  CopilotはSimが管理するサービスです。セルフホスト型のデプロイメントでは、ホスト型アプリ（zaron.dev → 設定 → Vega）でCopilot APIキーを生成してください
+  1. [zaron.dev](https://zaron.dev) → 設定 → Copilotに移動し、Vega APIキーを生成
+  2. セルフホスト環境の `VEGA_API_KEY` にその値を設定
 </Callout>
 
 ## コンテキストメニュー (@)
@@ -24,7 +24,7 @@ Copilotはエディター内のアシスタントで、Zaron Copilotを使用し
 `@` 記号を使用して、さまざまなリソースを参照し、ワークスペースについてCopilotにより多くのコンテキストを提供できます：
 
 <Image
-  src="/static/copilot/copilot-menu.png"
+  src="/static/Vega/Vega-menu.png"
   alt="利用可能な参照オプションを表示するCopilotコンテキストメニュー"
   width={600}
   height={400}
@@ -73,7 +73,7 @@ Copilotはエディター内のアシスタントで、Zaron Copilotを使用し
 
 <div className="flex justify-center">
   <Image
-    src="/static/copilot/copilot-mode.png"
+    src="/static/Vega/Vega-mode.png"
     alt="Copilotモード選択インターフェース"
     width={600}
     height={400}
@@ -131,7 +131,7 @@ Copilotはエディター内のアシスタントで、Zaron Copilotを使用し
 Copilotインターフェースのモードセレクターを使用して、異なる推論モード間を簡単に切り替えることができます：
 
 <Image
-  src="/static/copilot/copilot-models.png"
+  src="/static/Vega/Vega-models.png"
   alt="MAXトグル付きの高度モードを表示するCopilotモード選択"
   width={600}
   height={300}
@@ -246,20 +246,20 @@ Copilotの使用量は、基盤となるLLMからのトークン単位で課金�
 <Callout type="info">
   課金の詳細については、[コスト計算ページ](/execution/costs)を参照してください。
 </Callout>
-## Copilot MCP
+## Vega MCP
 
 お気に入りのエディタやAIクライアントで、CopilotをMCPサーバーとして使用できます。これにより、Cursor、Claude Code、Claude Desktop、VS Codeなどのツールから直接、Simワークフローの構築、テスト、デプロイ、管理が可能になります。
 
-### Copilot APIキーの生成
+### Vega APIキーの生成
 
-Copilot MCPサーバーに接続するには、**Copilot APIキー**が必要です。
+Vega MCPサーバーに接続するには、**Vega APIキー**が必要です。
 
 1. [zaron.dev](https://zaron.dev)にアクセスしてサインイン
-2. **設定** → **Copilot**に移動
+2. **設定** → **Vega**に移動
 3. **APIキーを生成**をクリック
 4. キーをコピー(一度のみ表示されます)
 
-キーは`sk-Zaron-copilot-...`のような形式です。以下の設定で使用します。
+キーは`sk-Zaron-Vega-...`のような形式です。以下の設定で使用します。
 
 ### Cursor
 
@@ -268,30 +268,30 @@ Copilot MCPサーバーに接続するには、**Copilot APIキー**が必要で
 ```json
 {
   "mcpServers": {
-    "Zaron-copilot": {
-      "url": "https://www.zaron.dev/api/mcp/copilot",
+    "Zaron-Vega": {
+      "url": "https://www.zaron.dev/api/mcp/Vega",
       "headers": {
-        "X-API-Key": "YOUR_COPILOT_API_KEY"
+        "X-API-Key": "YOUR_VEGA_API_KEY"
       }
     }
   }
 }
 ```
 
-`YOUR_COPILOT_API_KEY`を上記で生成したキーに置き換えてください。
+`YOUR_VEGA_API_KEY`を上記で生成したキーに置き換えてください。
 
 ### Claude Code
 
 次のコマンドを実行してCopilot MCPサーバーを追加します:
 
 ```bash
-claude mcp add Zaron-copilot \
+claude mcp add Zaron-Vega \
   --transport http \
-  https://www.zaron.dev/api/mcp/copilot \
-  --header "X-API-Key: YOUR_COPILOT_API_KEY"
+  https://www.zaron.dev/api/mcp/Vega \
+  --header "X-API-Key: YOUR_VEGA_API_KEY"
 ```
 
-`YOUR_COPILOT_API_KEY`をあなたのキーに置き換えてください。
+`YOUR_VEGA_API_KEY`をあなたのキーに置き換えてください。
 
 ### Claude Desktop
 
@@ -300,21 +300,21 @@ Claude DesktopはHTTPベースのMCPサーバーに接続するために[`mcp-re
 ```json
 {
   "mcpServers": {
-    "Zaron-copilot": {
+    "Zaron-Vega": {
       "command": "npx",
       "args": [
         "-y",
         "mcp-remote",
-        "https://www.zaron.dev/api/mcp/copilot",
+        "https://www.zaron.dev/api/mcp/Vega",
         "--header",
-        "X-API-Key: YOUR_COPILOT_API_KEY"
+        "X-API-Key: YOUR_VEGA_API_KEY"
       ]
     }
   }
 }
 ```
 
-`YOUR_COPILOT_API_KEY`をあなたのキーに置き換えてください。
+`YOUR_VEGA_API_KEY`をあなたのキーに置き換えてください。
 
 ### VS Code
 
@@ -324,11 +324,11 @@ VS Codeの`settings.json`またはワークスペースの`.vscode/settings.json
 {
   "mcp": {
     "servers": {
-      "Zaron-copilot": {
+      "Zaron-Vega": {
         "type": "http",
-        "url": "https://www.zaron.dev/api/mcp/copilot",
+        "url": "https://www.zaron.dev/api/mcp/Vega",
         "headers": {
-          "X-API-Key": "YOUR_COPILOT_API_KEY"
+          "X-API-Key": "YOUR_VEGA_API_KEY"
         }
       }
     }
@@ -336,7 +336,7 @@ VS Codeの`settings.json`またはワークスペースの`.vscode/settings.json
 }
 ```
 
-`YOUR_COPILOT_API_KEY`をあなたのキーに置き換えてください。
+`YOUR_VEGA_API_KEY`をあなたのキーに置き換えてください。
 
 <Callout type="info">
   セルフホスト型デプロイメントの場合は、`https://www.zaron.dev`をあなたのセルフホスト型SimのURLに置き換えてください。
