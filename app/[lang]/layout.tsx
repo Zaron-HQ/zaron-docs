@@ -75,7 +75,7 @@ export default async function Layout({ children, params }: LayoutProps) {
       url: 'https://zaron.dev',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://docs.zaron.dev/static/logo.png',
+        url: 'https://docs.zaron.dev/icon.svg',
       },
     },
     inLanguage: lang,

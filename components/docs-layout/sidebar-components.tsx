@@ -44,7 +44,7 @@ export function SidebarItem({ item }: { item: Item }) {
         'lg:text-gray-600 lg:dark:text-gray-400',
         !active && 'lg:hover:bg-gray-100/60 lg:dark:hover:bg-gray-800/40',
         active &&
-          'lg:bg-emerald-50/80 lg:font-normal lg:text-emerald-600 lg:dark:bg-emerald-900/15 lg:dark:text-emerald-400'
+          'lg:bg-blue-50/80 lg:font-normal lg:text-[#0070F3] lg:dark:bg-blue-900/15 lg:dark:text-blue-400'
       )}
     >
       {item.name}
@@ -90,7 +90,7 @@ export function SidebarFolder({ item, children }: { item: Folder; children: Reac
           'lg:text-gray-600 lg:dark:text-gray-400',
           !active && 'lg:hover:bg-gray-100/60 lg:dark:hover:bg-gray-800/40',
           active &&
-            'lg:bg-emerald-50/80 lg:font-normal lg:text-emerald-600 lg:dark:bg-emerald-900/15 lg:dark:text-emerald-400'
+            'lg:bg-blue-50/80 lg:font-normal lg:text-[#0070F3] lg:dark:bg-blue-900/15 lg:dark:text-blue-400'
         )}
       >
         {item.name}
@@ -115,7 +115,7 @@ export function SidebarFolder({ item, children }: { item: Folder; children: Reac
               'lg:text-gray-800 lg:dark:text-gray-200',
               !active && 'lg:hover:bg-gray-100/60 lg:dark:hover:bg-gray-800/40',
               active &&
-                'lg:bg-emerald-50/80 lg:text-emerald-600 lg:dark:bg-emerald-900/15 lg:dark:text-emerald-400'
+                'lg:bg-blue-50/80 lg:text-[#0070F3] lg:dark:bg-blue-900/15 lg:dark:text-blue-400'
             )}
           >
             {item.name}

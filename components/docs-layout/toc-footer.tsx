@@ -12,14 +12,14 @@ export function TOCFooter() {
         </div>
         <div className='text-muted-foreground'>Trusted by over 100,000 builders.</div>
         <div className='text-muted-foreground'>
-          The open-source platform to build AI agents and run your agentic workforce.
+          The AI-first platform to build agents and run your agentic workforce.
         </div>
         <Link
           href='https://zaron.dev/signup'
           target='_blank'
           rel='noopener noreferrer'
-          className='group mt-2 inline-flex h-8 w-fit items-center justify-center gap-2 whitespace-nowrap rounded-[5px] border border-[#33C482] bg-[#33C482] px-[10px] font-medium text-black text-sm outline-none transition-[filter] hover:brightness-110 focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50'
-          aria-label='Get started with ZARON - Sign up for free'
+          className='group mt-2 inline-flex h-8 w-fit items-center justify-center gap-2 whitespace-nowrap rounded-[5px] border border-[#0070F3] bg-[#0070F3] px-[10px] font-medium text-sm text-white outline-none transition-[filter] hover:brightness-110 focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50'
+          aria-label='Get started with Zaron - Sign up for free'
         >
           <span>Get started</span>
           <span className='relative inline-flex h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5'>

@@ -227,12 +227,12 @@ html:not(.dark) #nd-sidebar button:not([aria-label*="ollapse"]):not([aria-label*
 #nd-sidebar a.text-fd-primary,
 #nd-sidebar a[class*="bg-fd-primary"],
 #nd-sidebar a[class*="text-fd-primary"],
-/* Override custom sidebar green classes */
+/* Override custom sidebar blue classes */
   #nd-sidebar
-  a.bg-emerald-50\/80,
-#nd-sidebar a.text-emerald-600,
-#nd-sidebar a[class*="bg-emerald"],
-#nd-sidebar a[class*="text-emerald"] {
+  a.bg-blue-50\/80,
+#nd-sidebar a.text-\[\#0070F3\],
+#nd-sidebar a[class*="bg-blue"],
+#nd-sidebar a[class*="text-blue"] {
   background-image: none !important;
 }
 
@@ -243,10 +243,10 @@ html.dark #nd-sidebar a.bg-fd-primary\/10,
 html.dark #nd-sidebar a.text-fd-primary,
 html.dark #nd-sidebar a[class*="bg-fd-primary"],
 html.dark #nd-sidebar a[class*="text-fd-primary"],
-html.dark #nd-sidebar a.bg-emerald-50\/80,
-html.dark #nd-sidebar a.text-emerald-600,
-html.dark #nd-sidebar a[class*="bg-emerald"],
-html.dark #nd-sidebar a[class*="text-emerald"] {
+html.dark #nd-sidebar a.bg-blue-50\/80,
+html.dark #nd-sidebar a.text-\[\#0070F3\],
+html.dark #nd-sidebar a[class*="bg-blue"],
+html.dark #nd-sidebar a[class*="text-blue"] {
   background-color: rgba(255, 255, 255, 0.15) !important;
   color: rgba(255, 255, 255, 1) !important;
 }
@@ -258,10 +258,10 @@ html:not(.dark) #nd-sidebar a.bg-fd-primary\/10,
 html:not(.dark) #nd-sidebar a.text-fd-primary,
 html:not(.dark) #nd-sidebar a[class*="bg-fd-primary"],
 html:not(.dark) #nd-sidebar a[class*="text-fd-primary"],
-html:not(.dark) #nd-sidebar a.bg-emerald-50\/80,
-html:not(.dark) #nd-sidebar a.text-emerald-600,
-html:not(.dark) #nd-sidebar a[class*="bg-emerald"],
-html:not(.dark) #nd-sidebar a[class*="text-emerald"] {
+html:not(.dark) #nd-sidebar a.bg-blue-50\/80,
+html:not(.dark) #nd-sidebar a.text-\[\#0070F3\],
+html:not(.dark) #nd-sidebar a[class*="bg-blue"],
+html:not(.dark) #nd-sidebar a[class*="text-blue"] {
   background-color: rgba(0, 0, 0, 0.07) !important;
   color: rgba(0, 0, 0, 0.9) !important;
 }
@@ -279,8 +279,8 @@ html:not(.dark) #nd-sidebar button:hover:not([data-active="true"]) {
 }
 
 /* Dark mode - ensure active/selected items don't change on hover */
-html.dark #nd-sidebar a.bg-emerald-50\/80:hover,
-html.dark #nd-sidebar a[class*="bg-emerald"]:hover,
+html.dark #nd-sidebar a.bg-blue-50\/80:hover,
+html.dark #nd-sidebar a[class*="bg-blue"]:hover,
 html.dark #nd-sidebar a[data-active="true"]:hover,
 html.dark #nd-sidebar button[data-active="true"]:hover {
   background-color: rgba(255, 255, 255, 0.15) !important;
@@ -288,8 +288,8 @@ html.dark #nd-sidebar button[data-active="true"]:hover {
 }
 
 /* Light mode - ensure active/selected items don't change on hover */
-html:not(.dark) #nd-sidebar a.bg-emerald-50\/80:hover,
-html:not(.dark) #nd-sidebar a[class*="bg-emerald"]:hover,
+html:not(.dark) #nd-sidebar a.bg-blue-50\/80:hover,
+html:not(.dark) #nd-sidebar a[class*="bg-blue"]:hover,
 html:not(.dark) #nd-sidebar a[data-active="true"]:hover,
 html:not(.dark) #nd-sidebar button[data-active="true"]:hover {
   background-color: rgba(0, 0, 0, 0.07) !important;
